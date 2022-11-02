@@ -1,4 +1,4 @@
-const fetch = require('node-fetch')
+import fetch from 'node-fetch'
 
 export default function (request, response) {
   fetch('https://fakestoreapi.com/products/1')
