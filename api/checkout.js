@@ -1,6 +1,8 @@
 const bodyKeys = ['firstname', 'lastname', 'productId', 'quantity', 'address']
 
 export default function (request, response) {
+  if (request.method === 'OPTIONS') { return response.status(200).json(({ body: "OK" })) }
+
   if (!request.body) {
     return response.status(400).json({ error: 'Bad Request' });
   }
